@@ -1,0 +1,7 @@
+apiVersion: "stable.example.com/v1" 
+kind: Smee
+metadata:
+  name: eric-the-smee
+spec: 
+  sourceUrl: https://smee.io/abc123
+  targetUrl: http://localhost:3000/events

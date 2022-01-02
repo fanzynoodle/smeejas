@@ -1,0 +1,7 @@
+apiVersion: "stable.example.com/v1" 
+kind: Smee
+metadata:
+  name: george
+spec: 
+  sourceUrl: https://smee.io/abc123
+  targetUrl: http://host.minikube.internal:4432

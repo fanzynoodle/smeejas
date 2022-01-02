@@ -1,0 +1,16 @@
+{
+  "name": "smeejas",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "smee operator for kubernetes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@kubernetes/client-node": "^0.16.1",
+    "smee-client": "^1.0.1"
+  }
+}

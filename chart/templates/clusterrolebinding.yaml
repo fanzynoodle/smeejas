@@ -1,0 +1,21 @@
+{{- if .Values.serviceAccount.create -}}
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: {{ include "smeejas.serviceAccountName" . }}
+  namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "smeejas.labels" . | nindent 4 }}
+  {{- with .Values.serviceAccount.annotations }}
+  annotations:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+subjects:
+- kind: ServiceAccount
+  name: {{ include "smeejas.serviceAccountName" . }}
+  namespace: {{ .Release.Namespace }}
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: {{ include "smeejas.serviceAccountName" . }}
+{{- end }}
