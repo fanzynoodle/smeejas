@@ -1,7 +1,7 @@
 apiVersion: "stable.example.com/v1" 
 kind: Smee
 metadata:
-  name: george
+  name: eric-the-smee
 spec: 
   sourceUrl: https://smee.io/abc123
-  targetUrl: http://host.minikube.internal:4432
+  targetUrl: http://foo.some-namespace.svc.cluster.local:4432
